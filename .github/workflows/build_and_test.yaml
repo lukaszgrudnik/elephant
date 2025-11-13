@@ -27,5 +27,13 @@ jobs:
       - name: Run unit tests
         run: npm test
 
+      - name: Start shell app
+        run: npm run serve:shell &
+        env:
+          CI: true
+
+      - name: Wait for server
+        run: npx wait-on http://localhost:3000
+
       - name: Run e2e tests
         run: npm run e2e
