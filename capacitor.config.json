@@ -1,0 +1,6 @@
+{
+  "webDir": "apps/shell/dist",
+  "bundledWebRuntime": false,
+  "appId": "com.example.app",
+  "appName": "elephant"
+}
