@@ -1,7 +1,11 @@
 {
   "name": "shell",
+  "private": true,
   "scripts": {
     "serve": "rsbuild",
     "build": "rsbuild build"
+  },
+  "dependencies": {
+    "elephant.api": "1.0.0"
   }
 }

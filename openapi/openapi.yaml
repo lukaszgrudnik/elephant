@@ -1,0 +1,9 @@
+openapi: 3.0.3
+info:
+  title: API
+  description: Elephant app API specification
+  version: 1.0.0
+
+paths:
+  /api/sign-in:
+    $ref: './paths/sign-in.yaml'
