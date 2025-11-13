@@ -1,0 +1,18 @@
+post:
+  summary: Sign in
+  description: Authenticate a user and return a token.
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../components/sign-in-request.yaml#/SignInRequest'
+  responses:
+    '200':
+      description: User successfully signed in
+      content:
+        application/json:
+          schema:
+            $ref: '../components/sign-in-response.yaml#/SignInResponse'
+    '401':
+      description: Invalid email or password

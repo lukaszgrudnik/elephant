@@ -1,7 +1,8 @@
 {
   "name": "elephant",
   "workspaces": [
-    "apps/shell"
+    "apps/shell",
+    "api"
   ],
   "scripts": {
     "serve:shell": "npm run serve --workspace=apps/shell",
@@ -9,12 +10,15 @@
     "build:shell:mobile": "npm run build --workspace=apps/shell && npx cap copy",
     "open:shell:android": "npm run build --workspace=apps/shell && npx cap copy && npx cap add android && npx cap open android",
     "open:shell:ios": "npm run build --workspace=apps/shell && npx cap copy && npx cap add ios && npx cap open ios",
-    "test": "jest"
+    "test": "jest",
+    "api:generate": "openapi-generator-cli generate"
   },
   "devDependencies": {
     "@capacitor/android": "^7.4.4",
     "@capacitor/cli": "^7.4.4",
     "@capacitor/core": "^7.4.4",
+    "@mocks-server/main": "^4.1.0",
+    "@openapitools/openapi-generator-cli": "^2.25.0",
     "@rsbuild/core": "^1.6.2",
     "@rsbuild/plugin-react": "^1.4.1",
     "@rsbuild/plugin-sass": "^1.4.0",
