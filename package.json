@@ -2,6 +2,7 @@
   "name": "elephant",
   "workspaces": [
     "apps/shell",
+    "apps/e-ui",
     "api",
     "mock/generated",
     "mock/custom"

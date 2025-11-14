@@ -6,6 +6,7 @@
     "build": "rsbuild build"
   },
   "dependencies": {
-    "elephant.api": "1.0.0"
+    "elephant.api": "1.0.0",
+    "e-ui": "1.0.0"
   }
 }

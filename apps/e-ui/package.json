@@ -1,0 +1,9 @@
+{
+  "name": "e-ui",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "dependencies": {
+    "@base-ui-components/react": "^1.0.0-beta.4"
+  }
+}
