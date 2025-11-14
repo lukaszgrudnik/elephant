@@ -5,3 +5,4 @@ package-lock.json
 android
 ios
 api
+mock/generated
