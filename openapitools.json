@@ -14,7 +14,14 @@
           "npmDescription": "API client for Elephant service",
           "supportES6": true
         }
+      },
+      "mock": {
+        "inputSpec": "./openapi/openapi.yaml",
+        "output": "mock/generated",
+        "generatorName": "nodejs-express-server",
+        "templateDir": "./openapi-generator/mock/templates"
       }
     }
   }
 }
+

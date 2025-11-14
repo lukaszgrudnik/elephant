@@ -2,7 +2,9 @@
   "name": "elephant",
   "workspaces": [
     "apps/shell",
-    "api"
+    "api",
+    "mock/generated",
+    "mock/custom"
   ],
   "scripts": {
     "serve:shell": "npm run serve --workspace=apps/shell",
@@ -12,7 +14,9 @@
     "open:shell:ios": "npm run build --workspace=apps/shell && npx cap copy && npx cap add ios && npx cap open ios",
     "test": "jest",
     "e2e": "npx cypress run --browser chrome",
-    "api:generate": "openapi-generator-cli generate"
+    "api:generate": "openapi-generator-cli generate",
+    "api:generate:templates": "openapi-generator-cli author template -g nodejs-express-server -o ./openapi-generator/mock/templates",
+    "mock:start": "npm run start --workspace=mock/generated"
   },
   "devDependencies": {
     "@capacitor/android": "^7.4.4",
