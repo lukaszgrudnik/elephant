@@ -6,6 +6,9 @@
     "build": "rsbuild build"
   },
   "dependencies": {
-    "elephant.api": "1.0.0"
+    "@base-ui-components/react": "^1.0.0-beta.6",
+    "elephant.api": "1.0.0",
+    "react-router": "^7.9.6",
+    "tailwindcss": "^4.1.17"
   }
 }
