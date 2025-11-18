@@ -8,6 +8,14 @@ describe('Hello World Page', () => {
     cy.visit('/');
 
     // Check if "Hello World" text is visible
-    cy.contains('App Component').should('be.visible');
+    cy.contains('Test Link').should('be.visible');
+  });
+
+  it('should redirect to test', () => {
+    // Visit the base URL (configured in cypress.config.ts, e.g., http://localhost:3000)
+    cy.visit('/test');
+
+    // Check if "Hello World" text is visible
+    cy.contains('Test').should('be.visible');
   });
 });
