@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+.root {
+  isolation: isolate;
+}
+
+body {
+  position: relative;
+}
