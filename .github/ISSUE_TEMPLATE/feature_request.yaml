@@ -6,14 +6,6 @@ assignees:
   - lukaszgrudnik
 
 body:
-  - type: input
-    id: feature_title
-    attributes:
-      label: Feature Title
-      placeholder: "Short title of the feature"
-    validations:
-      required: true
-
   - type: textarea
     id: feature_description
     attributes:
