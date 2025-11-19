@@ -1,0 +1,23 @@
+name: Feature Request
+description: Simple feature request form
+title: "[FEATURE] "
+labels: ["enhancement"]
+assignees:
+  - lukaszgrudnik
+
+body:
+  - type: input
+    id: feature_title
+    attributes:
+      label: Feature Title
+      placeholder: "Short title of the feature"
+    validations:
+      required: true
+
+  - type: textarea
+    id: feature_description
+    attributes:
+      label: Description
+      placeholder: "Describe the feature you'd like to see"
+    validations:
+      required: true
