@@ -1,5 +1,10 @@
 import { createBrowserRouter } from 'react-router';
 import App from './app/app';
+import { lazy, Suspense } from 'react';
+
+const Creator = lazy(
+  () => import('creator/Creator'),
+);
 
 export default createBrowserRouter([
   {
@@ -7,8 +12,12 @@ export default createBrowserRouter([
     Component: App,
     children: [
       {
-        path: '/test',
-        element: <div>Test</div>,
+        path: '/creator',
+        element: (
+          <Suspense>
+            <Creator />
+          </Suspense>
+        ),
       },
     ],
   },

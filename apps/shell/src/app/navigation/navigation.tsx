@@ -6,7 +6,10 @@ export default function ExampleNavigationMenu() {
     <NavigationMenu.Root className="min-w-max rounded-lg bg-gray-50 p-1 text-gray-900">
       <NavigationMenu.List className="relative flex">
         <NavigationMenu.Item>
-          <Link className={triggerClassName} href="/test">
+          <Link
+            className={triggerClassName}
+            href="/creator"
+          >
             Test Link
           </Link>
         </NavigationMenu.Item>
@@ -15,15 +18,21 @@ export default function ExampleNavigationMenu() {
       <NavigationMenu.Portal>
         <NavigationMenu.Positioner
           sideOffset={10}
-          collisionPadding={{ top: 5, bottom: 5, left: 20, right: 20 }}
+          collisionPadding={{
+            top: 5,
+            bottom: 5,
+            left: 20,
+            right: 20,
+          }}
           collisionAvoidance={{ side: 'none' }}
-          className="box-border h-[var(--positioner-height)] w-[var(--positioner-width)] max-w-[var(--available-width)] transition-[top,left,right,bottom] duration-[var(--duration)] ease-[var(--easing)] before:absolute before:content-[''] data-[instant]:transition-none data-[side=bottom]:before:top-[-10px] data-[side=bottom]:before:right-0 data-[side=bottom]:before:left-0 data-[side=bottom]:before:h-2.5 data-[side=left]:before:top-0 data-[side=left]:before:right-[-10px] data-[side=left]:before:bottom-0 data-[side=left]:before:w-2.5 data-[side=right]:before:top-0 data-[side=right]:before:bottom-0 data-[side=right]:before:left-[-10px] data-[side=right]:before:w-2.5 data-[side=top]:before:right-0 data-[side=top]:before:bottom-[-10px] data-[side=top]:before:left-0 data-[side=top]:before:h-2.5"
+          className="h-[var(--positioner-height)]s box-border w-[var(--positioner-width)] max-w-[var(--available-width)] transition-[top,left,right,bottom] duration-[var(--duration)] ease-[var(--easing)] before:absolute before:content-[''] data-[instant]:transition-none data-[side=bottom]:before:top-[-10px] data-[side=bottom]:before:right-0 data-[side=bottom]:before:left-0 data-[side=bottom]:before:h-2.5 data-[side=left]:before:top-0 data-[side=left]:before:right-[-10px] data-[side=left]:before:bottom-0 data-[side=left]:before:w-2.5 data-[side=right]:before:top-0 data-[side=right]:before:bottom-0 data-[side=right]:before:left-[-10px] data-[side=right]:before:w-2.5 data-[side=top]:before:right-0 data-[side=top]:before:bottom-[-10px] data-[side=top]:before:left-0 data-[side=top]:before:h-2.5"
           style={{
             ['--duration' as string]: '0.35s',
-            ['--easing' as string]: 'cubic-bezier(0.22, 1, 0.36, 1)',
+            ['--easing' as string]:
+              'cubic-bezier(0.22, 1, 0.36, 1)',
           }}
         >
-          <NavigationMenu.Popup className="data-[ending-style]:easing-[ease] relative h-[var(--popup-height)] origin-[var(--transform-origin)] rounded-lg bg-[canvas] text-gray-900 shadow-lg shadow-gray-200 outline outline-1 outline-gray-200 transition-[opacity,transform,width,height,scale,translate] duration-[var(--duration)] ease-[var(--easing)] data-[ending-style]:scale-90 data-[ending-style]:opacity-0 data-[ending-style]:duration-150 data-[starting-style]:scale-90 data-[starting-style]:opacity-0 w-[var(--popup-width)] xs:w-[var(--popup-width)] dark:shadow-none dark:-outline-offset-1 dark:outline-gray-300">
+          <NavigationMenu.Popup className="data-[ending-style]:easing-[ease] xs:w-[var(--popup-width)] relative h-[var(--popup-height)] w-[var(--popup-width)] origin-[var(--transform-origin)] rounded-lg bg-[canvas] text-gray-900 shadow-lg shadow-gray-200 outline outline-1 outline-gray-200 transition-[opacity,transform,width,height,scale,translate] duration-[var(--duration)] ease-[var(--easing)] data-[ending-style]:scale-90 data-[ending-style]:opacity-0 data-[ending-style]:duration-150 data-[starting-style]:scale-90 data-[starting-style]:opacity-0 dark:shadow-none dark:-outline-offset-1 dark:outline-gray-300">
             <NavigationMenu.Arrow className="flex transition-[left] duration-[var(--duration)] ease-[var(--easing)] data-[side=bottom]:top-[-8px] data-[side=left]:right-[-13px] data-[side=left]:rotate-90 data-[side=right]:left-[-13px] data-[side=right]:-rotate-90 data-[side=top]:bottom-[-8px] data-[side=top]:rotate-180">
               <ArrowSvg />
             </NavigationMenu.Arrow>
@@ -49,9 +58,17 @@ function Link(props: NavigationMenu.Link.Props) {
   );
 }
 
-function ArrowSvg(props: React.ComponentProps<'svg'>) {
+function ArrowSvg(
+  props: React.ComponentProps<'svg'>,
+) {
   return (
-    <svg width="20" height="10" viewBox="0 0 20 10" fill="none" {...props}>
+    <svg
+      width="20"
+      height="10"
+      viewBox="0 0 20 10"
+      fill="none"
+      {...props}
+    >
       <path
         d="M9.66437 2.60207L4.80758 6.97318C4.07308 7.63423 3.11989 8 2.13172 8H0V10H20V8H18.5349C17.5468 8 16.5936 7.63423 15.8591 6.97318L11.0023 2.60207C10.622 2.2598 10.0447 2.25979 9.66437 2.60207Z"
         className="fill-[canvas]"

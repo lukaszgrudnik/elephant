@@ -1,7 +1,7 @@
 name: Feature Request
 description: Simple feature request form
-title: "[FEATURE] "
-labels: ["enhancement"]
+title: '[FEATURE] '
+labels: ['enhancement']
 assignees:
   - lukaszgrudnik
 

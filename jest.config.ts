@@ -16,7 +16,14 @@ const config: Config = {
       },
     ],
   },
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  moduleFileExtensions: [
+    'ts',
+    'tsx',
+    'js',
+    'jsx',
+    'json',
+    'node',
+  ],
   setupFilesAfterEnv: ['<rootDir>/jest-setup.ts'],
   roots: ['<rootDir>/specs/shell'],
 };

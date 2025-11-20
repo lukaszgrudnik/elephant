@@ -2,6 +2,7 @@
   "name": "elephant",
   "workspaces": [
     "apps/shell",
+    "apps/creator",
     "api",
     "mock/generated",
     "mock/custom"
@@ -9,6 +10,8 @@
   "scripts": {
     "serve:shell": "npm run serve --workspace=apps/shell",
     "build:shell": "npm run build --workspace=apps/shell",
+    "serve:creator": "npm run serve --workspace=apps/creator",
+    "build:creator": "npm run build --workspace=apps/creator",
     "build:shell:mobile": "npm run build --workspace=apps/shell && npx cap copy",
     "open:shell:android": "npm run build --workspace=apps/shell && npx cap copy && npx cap add android && npx cap open android",
     "open:shell:ios": "npm run build --workspace=apps/shell && npx cap copy && npx cap add ios && npx cap open ios",
@@ -29,6 +32,7 @@
     "@rsbuild/plugin-sass": "^1.4.0",
     "@swc/core": "^1.15.0",
     "@swc/jest": "^0.2.39",
+    "@tailwindcss/postcss": "^4.1.17",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.0",
     "@types/jest": "^30.0.0",
@@ -37,12 +41,17 @@
     "cypress": "^15.6.0",
     "jest": "^30.2.0",
     "jest-environment-jsdom": "^30.2.0",
+    "postcss": "^8.5.6",
     "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.7.1",
+    "tailwindcss": "^4.1.17",
     "ts-node": "^10.9.2"
   },
   "dependencies": {
     "@capacitor/ios": "^7.4.4",
+    "@module-federation/rsbuild-plugin": "^0.21.4",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "react-error-boundary": "^6.0.0"
   }
 }

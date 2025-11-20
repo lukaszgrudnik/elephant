@@ -1,44 +1,44 @@
 name: Bug Report
 description: Simple bug report form
-title: "[BUG] "
-labels: ["bug"]
+title: '[BUG] '
+labels: ['bug']
 assignees:
- - lukaszgrudnik
+  - lukaszgrudnik
 
 body:
- - type: input
-   id: bug_title
-   attributes:
-    label: Bug Title
-    placeholder: "Short title of the bug"
-   validations:
-    required: true
+  - type: input
+    id: bug_title
+    attributes:
+      label: Bug Title
+      placeholder: 'Short title of the bug'
+    validations:
+      required: true
 
- - type: textarea
-   id: bug_description
-   attributes:
-    label: Description
-    placeholder: "Describe what happened and how to reproduce it"
-   validations:
-    required: true
+  - type: textarea
+    id: bug_description
+    attributes:
+      label: Description
+      placeholder: 'Describe what happened and how to reproduce it'
+    validations:
+      required: true
 
- - type: textarea
-   id: proposed_solution
-   attributes:
-    label: Proposed Solution
-    placeholder: "Optional: Suggest a fix or any insight into the issue"
-   validations:
-    required: false
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: Proposed Solution
+      placeholder: 'Optional: Suggest a fix or any insight into the issue'
+    validations:
+      required: false
 
- - type: dropdown
-   id: severity
-   attributes:
-    label: Severity
-    description: Select the severity of the bug
-    options:
-     - low
-     - medium
-     - high
-    default: medium
-   validations:
-    required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: Select the severity of the bug
+      options:
+        - low
+        - medium
+        - high
+      default: medium
+    validations:
+      required: true

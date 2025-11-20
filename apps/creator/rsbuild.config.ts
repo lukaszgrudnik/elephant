@@ -17,11 +17,11 @@ export default defineConfig({
     pluginReact(),
     pluginSass(),
     pluginModuleFederation({
-      name: 'shell',
-      remotes: {
-        creator:
-          'creator@http://localhost:8081/remoteEntry.js',
+      name: 'creator',
+      exposes: {
+        './Creator': './src/app/app.tsx',
       },
+      filename: 'remoteEntry.js',
       shared: {
         react: {
           singleton: true,
@@ -35,11 +35,7 @@ export default defineConfig({
       },
     }),
   ],
-  tools: {
-    rspack: {
-      output: {
-        publicPath: 'auto',
-      },
-    },
+  server: {
+    port: 8081,
   },
 });

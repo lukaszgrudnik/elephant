@@ -6,7 +6,7 @@
     "target": "ES6",
     "moduleResolution": "bundler",
     "verbatimModuleSyntax": true,
-    "noEmit": true,
+    "noEmit": true
   },
-  "types": ["jest","testing-library/jest-dom"]
+  "types": ["jest", "testing-library/jest-dom"]
 }
